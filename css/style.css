@@ -386,6 +386,129 @@
         left: 65%;
     }
 }
+/* Escritorio (min-width: 1199.98px) */
+@media (min-width: 1199.98px)  {
+    body { background: red; }
+
+    /* Ajustes específicos para escritorio */
+    .header-carousel .carousel-caption h1 {
+        font-size: 3rem;
+    }
+
+    .header-carousel .carousel-caption p {
+        font-size: 1.25rem;
+    }
+
+    /* Iconos y botones de navegación */
+    .owl-prev, .owl-next {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Tablet Portrait (min-width: 576px) and (max-width: 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
+    body { background: orange; }
+
+    /* Ajustes de texto */
+    .header-carousel .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    .header-carousel .carousel-caption p {
+        font-size: 1rem;
+    }
+    .header-carousel-item img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    /* Botones de Navegación */
+    .owl-prev, .owl-next {
+        top: 50%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Tablet Landscape (min-width: 991.98px) and (max-width: 1199.98px) */
+@media (min-width: 991.98px) and (max-width: 1199.98px) and (orientation: landscape) {
+    body { background: blue; }
+
+    /* Ajustes de texto y botones */
+    .header-carousel .carousel-caption h1 {
+        font-size: 2.75rem;
+    }
+
+    .header-carousel .carousel-caption p {
+        font-size: 1.1rem;
+    }
+
+    .owl-prev, .owl-next {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Móvil Portrait (max-width: 575.98px) */
+@media (max-width: 575.98px) and (orientation: portrait) {
+    body { background: green; }
+
+    /* Ajustes para pantallas pequeñas */
+    .header-carousel .carousel-caption h1 {
+        font-size: 1.75rem;
+    }
+
+    .header-carousel .carousel-caption p {
+        font-size: 0.875rem;
+    }
+
+    .header-carousel-item img {
+        height: 400px;
+    }
+
+    /* Botones de Navegación */
+    .owl-prev, .owl-next {
+        width: 40px;
+        height: 40px;
+        top: 90%;
+    }
+
+    .owl-prev { left: 10%; }
+    .owl-next { right: 10%; }
+}
+
+/* Móvil Landscape (min-width: 576px) and (max-width: 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation: landscape) {
+    body { background: black; }
+
+    /* Ajustes para texto y tamaño de imágenes */
+    .header-carousel .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .header-carousel .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .header-carousel-item img {
+        height: 500px;
+    }
+}
+
+/* Animaciones y Efectos CSS */
+.header-carousel .header-carousel-item::before,
+.header-carousel .header-carousel-item::after,
+.header-carousel .header-carousel-item-img-1::before,
+.header-carousel .header-carousel-item-img-1::after {
+    animation: RotateMoveCircle 10s linear infinite;
+}
+
+@keyframes RotateMoveCircle {
+    0% { top: -400px; }
+    50% { right: -200px; }
+    75% { top: -200px; }
+    100% { top: -400px; }
+}
 
 /*** Header Carousel End ***/
 
