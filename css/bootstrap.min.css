@@ -8292,10 +8292,10 @@ fieldset:disabled .btn {
     color: #7e2b34 !important
 }
 .text-primary {
-    color: white !important
+    color: 7e2b34 !important     /*logo letras ASISVE*/
 }
 .text-secondary {
-    color: #6c757d !important
+    color: #7e2b34 !important
 }
 
 .text-success {
