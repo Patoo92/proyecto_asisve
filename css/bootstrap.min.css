@@ -5,6 +5,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+    --bs-primary: #7e2b34;
+    --bs-secondary: white;
+    --bs-info: #7e2b34;
+    --bs-dark: #7e2b34;
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -18,14 +22,10 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #a35252;
-    --bs-secondary: #6c7d71;
     --bs-success: #198754;
-    --bs-info: #0dcaf0;
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
     --bs-light: #f7fafb;
-    --bs-dark: #7e2b34;
     --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
@@ -49,15 +49,10 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #0c0c0c;
+    color: #818181;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-}
-
-body .mb-0 {
-    color: black;
-    font-size: 25px;
 }
 
 hr {
@@ -237,12 +232,12 @@ sup {
 }
 
 a {
-    color: #44d2f6;
+    color: #7e2b34;
     text-decoration: none
 }
 
 a:hover {
-    color: #1a047d
+    color: #36a8c5
 }
 
 a:not([href]):not([class]),
@@ -2066,7 +2061,7 @@ progress {
     color: var(--bs-table-hover-color)
 }
 
-.table-Z {
+.table-primary {
     --bs-table-bg: #daf6fd;
     --bs-table-striped-bg: #cfeaf0;
     --bs-table-striped-color: #000;
@@ -2079,7 +2074,7 @@ progress {
 }
 
 .table-secondary {
-    --bs-table-bg: #e2e3e5;
+    --bs-table-bg: #ffffff;
     --bs-table-striped-bg: #d7d8da;
     --bs-table-striped-color: #000;
     --bs-table-active-bg: #cbccce;
@@ -2499,7 +2494,7 @@ textarea.form-control-lg {
     background-size: contain;
     border: 1px solid rgba(0, 0, 0, .25);
     appearance: none;
-    /* color-adjust: exact */
+    color-adjust: exact
 }
 
 .form-check-input[type=checkbox] {
@@ -2521,8 +2516,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-    background-color: #44d2f6;
-    border-color: #44d2f6
+    background-color: #7e2b34;
+    border-color: #7e2b34
 }
 
 .form-check-input:checked[type=checkbox] {
@@ -2534,8 +2529,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input[type=checkbox]:indeterminate {
-    background-color: #44d2f6;
-    border-color: #44d2f6;
+    background-color: #7e2b34;
+    border-color: #7e2b34;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e")
 }
 
@@ -3133,20 +3128,20 @@ fieldset:disabled .btn {
 .btn-secondary {
     color: #fff;
     background-color: #6c757d;
-    border-color: #6c757d
+    border-color: #ffffff
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #5c636a;
-    border-color: #565e64
+    background-color: #ffffff;
+    border-color: #ffffff
 }
 
 .btn-check:focus+.btn-secondary,
 .btn-secondary:focus {
     color: #fff;
-    background-color: #5c636a;
-    border-color: #565e64;
+    background-color: #ffffff;
+    border-color: #ffffff;
     box-shadow: 0 0 0 .25rem rgba(130, 138, 145, .5)
 }
 
@@ -3156,8 +3151,8 @@ fieldset:disabled .btn {
 .btn-secondary.active,
 .show>.btn-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #565e64;
-    border-color: #51585e
+    background-color: #ffffff;
+    border-color: #ffffff
 }
 
 .btn-check:checked+.btn-secondary:focus,
@@ -3165,14 +3160,14 @@ fieldset:disabled .btn {
 .btn-secondary:active:focus,
 .btn-secondary.active:focus,
 .show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .25rem rgba(130, 138, 145, .5)
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0.5)
 }
 
 .btn-secondary:disabled,
 .btn-secondary.disabled {
     color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
+    background-color: #ffffff;
+    border-color: #ffffff
 }
 
 .btn-success {
@@ -3486,7 +3481,7 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-secondary {
-    color: #6c757d;
+    color: #ffffff;
     border-color: #6c757d
 }
 
@@ -3767,7 +3762,7 @@ fieldset:disabled .btn {
 
 .btn-link {
     font-weight: 400;
-    color: #44d2f6;
+    color: #7e2b34;
     text-decoration: none
 }
 
@@ -8291,11 +8286,9 @@ fieldset:disabled .btn {
 .text-primary {
     color: #7e2b34 !important
 }
-.text-primary {
-    color: 7e2b34 !important     /*logo letras ASISVE*/
-}
+
 .text-secondary {
-    color: #7e2b34 !important
+    color: #6c757d !important
 }
 
 .text-success {
@@ -8319,7 +8312,7 @@ fieldset:disabled .btn {
 }
 
 .text-dark {
-    color: #f0f0f0 !important
+    color: #fff !important /*CONTADOR*/
 }
 
 .text-white {
@@ -8347,7 +8340,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-    background-color: #7e2b34 !important
+    background-color: #7e2b34 !important /*CONTADOR*/
 }
 
 .bg-secondary {
@@ -12482,7 +12475,7 @@ fieldset:disabled .btn {
 
 @media(min-width: 1200px) {
     .fs-1 {
-        font-size: 3.5rem !important
+        font-size: 2.5rem !important
     }
 
     .fs-2 {
