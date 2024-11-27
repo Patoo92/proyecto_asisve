@@ -168,92 +168,147 @@
     <!-- Header End -->
 
     <!-- Contact Start -->
-    <div class="container-fluid contact bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="contact-item">
-                        <div class="pb-5">
-                            <h4 class="text-primary">Contactanos</h4>
-                            <h1 class="display-4 mb-4">Ponte en contacto con Nosotros</h1>
+<div class="container-fluid contact bg-light py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="contact-item">
+                    <div class="pb-5">
+                        <h4 class="text-primary">Contactanos</h4>
+                        <h1 class="display-4 mb-4">Ponte en contacto con Nosotros</h1>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary btn-lg-square rounded-circle p-4"><i
+                                class="fa fa-home text-white"></i></div>
+                        <div class="ms-4">
+                            <h4>Dirección</h4>
+                            <p class="mb-0">C.Fuentelviejo, 37, San Blas-Canillejas, 28022 Madrid</p>
                         </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary btn-lg-square rounded-circle p-4"><i
-                                    class="fa fa-home text-white"></i></div>
-                            <div class="ms-4">
-                                <h4>Dirección</h4>
-                                <p class="mb-0">C.Fuentelviejo, 37, San Blas-Canillejas, 28022 Madrid</a>
-                                </p>
-                            </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary btn-lg-square rounded-circle p-2"><i
+                                class="fa fa-phone-alt text-white"></i></div>
+                        <div class="ms-4">
+                            <h4>Telefono</h4>
+                            <p class="mb-0">+34 644 74 05 59</p>
                         </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i
-                                    class="fa fa-phone-alt text-white"></i></div>
-                            <div class="ms-4">
-                                <h4>Telefono</h4>
-                                <p class="mb-0">+34 644 74 05 59</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="bg-primary btn-lg-square rounded-circle p-2"><i
-                                    class="fa fa-envelope-open text-white"></i></div>
-                            <div class="ms-4">
-                                <h4>Email</h4>
-                                <p class="mb-0">contacto@asisve.org</p>
-                            </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary btn-lg-square rounded-circle p-2"><i
+                                class="fa fa-envelope-open text-white"></i></div>
+                        <div class="ms-4">
+                            <h4>Email</h4>
+                            <p class="mb-0">contacto@asisve.org</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-lg-12 col-xl-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Nombre</label>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-xl-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Email</label>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-xl-6">
-                                <div class="form-floating">
-                                    <input type="phone" class="form-control" id="phone" placeholder="Phone">
-                                    <label for="phone">Telefono</label>
-                                </div>
-                            </div>
-                            <!-- no borrar <div class="col-lg-12 col-xl-6">
-                                <div class="form-floating"> 
-                                    <input type="text" class="form-control" id="project" placeholder="Project">
-                                        <label for="project">Motivo de contacto</label>
-                                    </div>
-                                </div> -->
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Asunto</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 160px"></textarea>
-                                    <label for="message">Mensaje</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3">Enviar Mensaje</button>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                <form id="contact-form">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" maxlength="100" required>
+                                <label for="name">Nombre</label>
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="phone" placeholder="Phone" maxlength="15">
+                                <label for="phone">Telefono</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="postal-code" placeholder="Código Postal" maxlength="5">
+                                <label for="postal-code">Código Postal</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" maxlength="200" required>
+                                <label for="subject">Asunto</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px" maxlength="1000" required></textarea>
+                                <label for="message">Mensaje</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <!-- Contacto Fin -->
+</div>
+<!-- Contacto Fin -->
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+    let formIsValid = true;
+
+    // Validar email
+    const email = document.getElementById("email").value;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        formIsValid = false;
+        alert("Por favor, ingrese un correo electrónico válido.");
+    }
+
+    // Validar teléfono (opcional)
+    const phone = document.getElementById("phone").value;
+    const phoneRegex = /^\+34\d{9}$/; // Código de España +9 dígitos
+    if (phone && !phoneRegex.test(phone)) {
+        formIsValid = false;
+        alert("Por favor, ingrese un número de teléfono válido (con código de España).");
+    }
+
+    // Validar código postal (opcional)
+    const postalCode = document.getElementById("postal-code").value;
+    const postalCodeRegex = /^\d{5}$/; // Código postal de 5 dígitos
+    if (postalCode && !postalCodeRegex.test(postalCode)) {
+        formIsValid = false;
+        alert("Por favor, ingrese un código postal válido.");
+    }
+
+    // Validar asunto
+    const subject = document.getElementById("subject").value;
+    if (subject.length > 200) {
+        formIsValid = false;
+        alert("El asunto no puede tener más de 200 caracteres.");
+    }
+
+    // Validar mensaje
+    const message = document.getElementById("message").value;
+    if (message.length > 1000) {
+        formIsValid = false;
+        alert("El mensaje no puede tener más de 1000 caracteres.");
+    }
+
+    // Validar nombre
+    const name = document.getElementById("name").value;
+    if (name.length > 100) {
+        formIsValid = false;
+        alert("El nombre no puede tener más de 100 caracteres.");
+    }
+
+    // Si alguna validación falla, evitar el envío del formulario
+    if (!formIsValid) {
+        event.preventDefault();
+    }
+});
+
+</script>
+
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
         <div class="container py-5">
