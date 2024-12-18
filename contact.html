@@ -33,6 +33,9 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+
+
+
 <body>
 
     <!-- Spinner Start -->
@@ -130,6 +133,7 @@
     </div>
     <!-- Navbar & Hero End -->
 
+
     <!-- Modal Search Start NO BORRAR DEJAR PARA EL BUSCADOR EN WEB -->
     <!--   
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -168,13 +172,14 @@
     <!-- Header End -->
 
     <!-- Contact Start -->
+
     <div class="container-fluid contact bg-light py-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="contact-item">
                         <div class="pb-5">
-                            <h4 class="text-primary">Contactanos</h4>
+                            <h4 class="text-primary">Contáctanos</h4>
                             <h1 class="display-4 mb-4">Ponte en contacto con Nosotros</h1>
                         </div>
                         <div class="d-flex align-items-center mb-4">
@@ -182,7 +187,8 @@
                                     class="fa fa-home text-white"></i></div>
                             <div class="ms-4">
                                 <h4>Dirección</h4>
-                                <p class="mb-0">C.Fuentelviejo, 37, San Blas-Canillejas, 28022 Madrid</p>
+                                <p class="mb-0">C.Fuentelviejo, 37, San Blas-Canillejas, 28022 Madrid</a>
+                                </p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center mb-4">
@@ -203,149 +209,131 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                    <form id="contact-form">
+
+                    <form name='formulario' id='formulario' action='https://www.google.com' target='_self'
+                        enctype="multipart/form-data">
+
                         <div class="row g-3">
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name"
-                                        maxlength="100" required>
-                                    <label for="name">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre"
+                                        placeholder="Nombre" required>
+                                    <label for="nombre">Nombre</label>
                                 </div>
                             </div>
+
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email"
-                                        required>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="Tu correo" required>
                                     <label for="email">Email</label>
                                 </div>
                             </div>
+
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="phone" placeholder="Phone"
-                                        maxlength="15">
-                                    <label for="phone">Telefono</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone"
+                                        placeholder="Teléfono" required pattern="^(6|7|8|9)\d{8}$"
+                                        oninput="validarTelefono(this)">
+                                    <label for="phone">Teléfono</label>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="postal-code" placeholder="Código Postal"
-                                        maxlength="5">
-                                    <label for="postal-code">Código Postal</label>
+                                    <input type="number" class="form-control" id="codigopostal" name="codigopostal"
+                                        placeholder="Código Postal" required>
+                                    <label for="codigoPostal">Código Postal</label>
+                                    <!-- <span id="codigoPostalError" class="error-message">Debe ser de 5 dígitos.</span>-->
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject"
-                                        maxlength="200" required>
-                                    <label for="subject">Asunto</label>
+                                    <input type="text" class="form-control" id="Asunto" name="Asunto"
+                                        placeholder="Asunto" required>
+                                    <label for="asunto">Asunto</label>
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 160px" maxlength="1000" required></textarea>
-                                    <label for="message">Mensaje</label>
-                                </div>
-                                <!-- Checkbox de políticas y condiciones -->
-                                <div class="col-lg-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="policyCheck">
-                                        <label class="form-check-label" for="policyCheck"><a href="Politicas_privacidad.html" target="_blank">Al hacer click aceptas Nuestros Terminos y Condiciones y Politicas de Privacidad</a>.
-                                        </label>
-                                    </div>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="Mensaje"
+                                        name="Mensaje" style="height: 160px" required></textarea>
+                                    <label for="mensaje">Mensaje</label>
                                 </div>
                             </div>
+
+                            <div>
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                <label for="terminos">Al hacer click aceptas Nuestros Términos y Condiciones y Políticas
+                                    de Privacidad.</label> <a href="/Politicas_privacidad.html">(Leer más)</a>
+                            </div>
+
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
-                            </div>
-                        </div>
+                                <!-- <button type="submit" id="enviar" disabled>Enviar Mensaje</button> -->
+                                <button class="btn btn-primary w-100 py-3" type="submit" id="enviar" value="Enviar"
+                                    disabled>Enviar Mensaje</button>
+
+                                <div id="error-message" class="text-danger" role="alert" aria-live="assertive"
+                                    aria-atomic="true"></div>
+                                <div id="successMessage" class="hidden">Gracias por tu mensaje. Dios te bendiga!</div>
+
                     </form>
+
                 </div>
+                </form>
+
             </div>
+
+            <script>
+                const form = document.getElementById('formulario');
+                const enviarButton = document.getElementById('enviar');
+                const terminosCheckbox = document.getElementById('terminos');
+
+                terminosCheckbox.addEventListener('change', () => {
+                    enviarButton.disabled = !terminosCheckbox.checked;
+                });
+                document.addEventListener("DOMContentLoaded", function () {
+                    const form = document.getElementById("formulario");
+                    const successMessage = document.getElementById("successMessage");
+
+                    form.addEventListener("submit", function (event) {
+                        event.preventDefault(); // Evita el envío del formulario
+
+                        // Simula el envío del formulario (puedes reemplazarlo por lógica real)
+                        setTimeout(() => {
+                            successMessage.classList.remove("hidden"); // Muestra el mensaje de éxito
+                            form.reset(); // Limpia el formulario
+                        }, 500); // Simulación de un tiempo de espera para envío
+                    });
+                });
+                function validarTelefono(input) {
+                    const telefono = input.value.trim();
+                    const regex = /^(6|7|8|9)\d{8}$/;
+
+                    if (telefono === "") {
+                        input.setCustomValidity("Completa este campo");
+                    } else if (!regex.test(telefono)) {
+                        input.setCustomValidity("Introduce un número de teléfono válido en España, 9 u 8 (para teléfonos fijos) y 6 ó 7, para teléfonos móviles");
+                    } else {
+                        input.setCustomValidity("");
+                    }
+                    input.reportValidity(); // Muestra el mensaje de validación
+                }
+
+            </script>
+
+
+
+
         </div>
+        </form>
+    </div>
+    </div>
+    </div>
     </div>
     <!-- Contacto Fin -->
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            let formIsValid = true;
-
-            // Validar email
-            const email = document.getElementById("email").value;
-            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailRegex.test(email)) {
-                formIsValid = false;
-                alert("Por favor, ingrese un correo electrónico válido.");
-            }
-
-            // Validar teléfono (opcional)
-            const phone = document.getElementById("phone").value;
-            const phoneRegex = /^\+34\d{9}$/; // Código de España +9 dígitos
-            if (phone && !phoneRegex.test(phone)) {
-                formIsValid = false;
-                alert("Por favor, ingrese un número de teléfono válido (con código de España).");
-            }
-
-            // Validar código postal (opcional)
-            const postalCode = document.getElementById("postal-code").value;
-            const postalCodeRegex = /^\d{5}$/; // Código postal de 5 dígitos
-            if (postalCode && !postalCodeRegex.test(postalCode)) {
-                formIsValid = false;
-                alert("Por favor, ingrese un código postal válido.");
-            }
-
-            // Validar asunto
-            const subject = document.getElementById("subject").value;
-            if (subject.length > 200) {
-                formIsValid = false;
-                alert("El asunto no puede tener más de 200 caracteres.");
-            }
-
-            // Validar mensaje
-            const message = document.getElementById("message").value;
-            if (message.length > 1000) {
-                formIsValid = false;
-                alert("El mensaje no puede tener más de 1000 caracteres.");
-            }
-
-            // Validar nombre
-            const name = document.getElementById("name").value;
-            if (name.length > 100) {
-                formIsValid = false;
-                alert("El nombre no puede tener más de 100 caracteres.");
-            }
-
-
-            document.addEventListener("DOMContentLoaded", function () {
-                const policyCheck = document.getElementById("policyCheck");
-                const submitBtn = document.getElementById("submitBtn");
-                const form = document.getElementById("contact-form");
-
-                // Habilitar/deshabilitar el botón de enviar según el estado del checkbox
-                policyCheck.addEventListener("change", function () {
-                    submitBtn.disabled = !this.checked;
-                });
-
-                // Prevenir el envío del formulario si no cumple los requisitos
-                form.addEventListener("submit", function (event) {
-                    if (!policyCheck.checked) {
-                        event.preventDefault();
-                    }
-                });
-            });
-
-
-            // Si alguna validación falla, evitar el envío del formulario
-            if (!formIsValid) {
-                event.preventDefault();
-            }
-        });
-
-
-
-    </script>
-
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
         <div class="container py-5">
