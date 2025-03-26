@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <title>ASISVE</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Asociación ASISVE, ayuda social, voluntariado, asistencia" name="keywords">
+    <meta content="ASISVE es una organización dedicada a brindar asistencia y apoyo a quienes más lo necesitan."
+        name="description">
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +23,6 @@
 
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
@@ -33,16 +34,17 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-
-
-
 <body>
 
     <!-- Spinner Start -->
-    <div id="spinner"
+    <div id="spinner" aria-hidden="true"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center
+        justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Cargando...</span>
+            <span class="visually-hidden">Cargando...</span>
+
         </div>
     </div>
     <!-- Spinner End -->
@@ -55,7 +57,7 @@
                 <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                     <div class="d-flex flex-wrap">
                         <a href="https://maps.app.goo.gl/xyM9AFHq11JRcjXM9" class="text-muted me-4"><i
-                                class="fas fa-map-marker-alt --bs-white me-2"></i>Ubicacion</a>
+                                class="fas fa-map-marker-alt text-white me-2"></i>Ubicacion</a>
                         <a href="https://wa.me/+34644740559" class="text-muted me-4"><i
                                 class="fas fa-phone-alt --bs-white me-2"></i>34644740559</a>
                         <a href="contact.html" class="text-muted me-0"><i
@@ -83,14 +85,15 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid sticky-top px-0">
-        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+        <div class="position-relative bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
         </div>
         <div class="container px-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
                 <a href="index.html" class="navbar-brand p-0">
-                    <img src="/img/logo ASISVE vertical.webp" style="width: 100; height: 50px;" alt="Logo">
+                    <img src="/img/logo_asisve.webp" style=" height: 50px;" alt="Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -230,11 +233,10 @@
                                     <label for="email">Email</label>
                                 </div>
                             </div>
-
+                            
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="tel" class="form-control" id="phone" name="phone"
-                                        placeholder="Teléfono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}+">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Teléfono" pattern="(\+34|0034|34)?[6789]\d{8}">
                                     <label for="phone">Teléfono</label>
                                 </div>
                             </div>
