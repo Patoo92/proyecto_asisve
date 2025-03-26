@@ -648,7 +648,7 @@
 
 .footer .footer-item a:hover {
     letter-spacing: 1px;
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 
 .footer .footer-item-post a {
