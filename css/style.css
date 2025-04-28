@@ -1,4 +1,3 @@
-
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -631,6 +630,14 @@
     margin-top: 10px;
     text-align: center;
 }
+input:invalid, textarea:invalid {
+    border-color: #dc3545;
+}
+
+input:valid, textarea:valid {
+    border-color: #28a745;
+}
+
 
 /*** Footer Start ***/
 .footer {
