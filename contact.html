@@ -5,10 +5,8 @@
     <meta charset="utf-8">
     <title>ASISVE</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Asociación ASISVE, ayuda social, voluntariado, asistencia" name="keywords">
-    <meta content="ASISVE es una organización dedicada a brindar asistencia y apoyo a quienes más lo necesitan."
-        name="description">
-
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +21,7 @@
 
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
@@ -34,14 +33,24 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6QT0R39KS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P6QT0R39KS');
+</script>
+
+
 <body>
 
     <!-- Spinner Start -->
-    <div id="spinner" aria-hidden="true"
+    <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="visually-hidden">Cargando...</span>
-
+            <span class="sr-only">Cargando...</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -54,7 +63,7 @@
                 <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                     <div class="d-flex flex-wrap">
                         <a href="https://maps.app.goo.gl/xyM9AFHq11JRcjXM9" class="text-muted me-4"><i
-                                class="fas fa-map-marker-alt text-white me-2"></i>Ubicacion</a>
+                                class="fas fa-map-marker-alt --bs-white me-2"></i>Ubicacion</a>
                         <a href="https://wa.me/+34644740559" class="text-muted me-4"><i
                                 class="fas fa-phone-alt --bs-white me-2"></i>34644740559</a>
                         <a href="contact.html" class="text-muted me-0"><i
@@ -82,15 +91,14 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid sticky-top px-0">
-        <div class="position-relative bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
         </div>
         <div class="container px-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
                 <a href="index.html" class="navbar-brand p-0">
-                    <img src="/img/logo_asisve.webp" style=" height: 50px;" alt="Logo">
+                    <img src="/img/logo ASISVE vertical.webp" style="width: 100; height: 50px;" alt="Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -133,6 +141,7 @@
     </div>
     <!-- Navbar & Hero End -->
 
+
     <!-- Modal Search Start NO BORRAR DEJAR PARA EL BUSCADOR EN WEB -->
     <!--   
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -156,10 +165,8 @@
     -->
     <!-- Modal Search End -->
 
-
-    <!-- FOTO DE LA SECCION CONTACTO 
-     Header Start -->
-    <!--     <div class="container-fluid bg-breadcrumb">
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
         <div class="bg-breadcrumb-single">
 
         </div>
@@ -169,11 +176,9 @@
                 <img src="/img/foto-para-contactanos.webp">
             </ol>
         </div>
-    </div> -->
+    </div>
+    <!-- Header End -->
 
-    <!-- DECOMENTAR EL FRAGMENTO DE ARRIBA 
-     
-    Header End -->
     <!-- Contact Start -->
 
     <div class="container-fluid contact bg-light py-5">
@@ -198,7 +203,7 @@
                             <div class="bg-primary btn-lg-square rounded-circle p-2"><i
                                     class="fa fa-phone-alt text-white"></i></div>
                             <div class="ms-4">
-                                <h4>Teléfono</h4>
+                                <h4>Telefono</h4>
                                 <p class="mb-0">+34 644 74 05 59</p>
                             </div>
                         </div>
@@ -214,17 +219,14 @@
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
 
-                    <form name='formulario' id='formulario' action='https://www.google.com' target='_self'
+                    <form name='formulario' id='formulario' method='post' action='/api/envioCorreo.php' target='_self'
                         enctype="multipart/form-data">
 
                         <div class="row g-3">
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="nombre" name="nombre"
-                                        pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ]+(?: [A-Za-zÁÉÍÓÚáéíóúÑñ]+)*$"
-                                        title="Solo letras y espacios entre palabras. No puede empezar ni terminar en espacio."
-                                        required placeholder="Nombre" minlength="3" maxlength="25">
-
+                                        placeholder="Nombre" required>
                                     <label for="nombre">Nombre</label>
                                 </div>
                             </div>
@@ -232,17 +234,16 @@
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email" name="email"
-                                        placeholder="Tu correo" required minlength="5" maxlength="50"
-                                        title="Ingresa un correo valido">
+                                        placeholder="Tu correo" required>
                                     <label for="email">Email</label>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="telefono" name="telefono"
-                                        placeholder="Teléfono" pattern="[6-9]\d{2}\s?\d{3}\s?\d{3}" inputmode="numeric" maxlength="9" title="Debe ser un número español válido de 9 dígitos, comenzando por 6, 7, 8 o 9">
-                                    <label for="telefono">Teléfono</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone"
+                                        placeholder="Teléfono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}+">
+                                    <label for="phone">Teléfono</label>
                                 </div>
                             </div>
 
@@ -250,24 +251,24 @@
                             <div class="col-lg-12 col-xl-6">
                                 <div class="form-floating">
                                     <input type="number" class="form-control" id="codigopostal" name="codigopostal"
-                                        placeholder="Código Postal" required maxlength="5">
-                                    <label for="codigopostal">Código Postal</label>
+                                        placeholder="Código Postal" required>
+                                    <label for="codigoPostal">Código Postal</label>
+                                    <!-- <span id="codigoPostalError" class="error-message">Debe ser de 5 dígitos.</span>-->
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="Asunto" name="Asunto"
-                                        placeholder="Asunto" required minlength="5" maxlength="20">
-                                    <label for="Asunto">Asunto</label>
+                                        placeholder="Asunto" required>
+                                    <label for="asunto">Asunto</label>
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a message here" id="Mensaje"
-                                        name="Mensaje" style="height: 160px" required minlength="10"
-                                        maxlength="265"></textarea>
+                                        name="Mensaje" style="height: 160px" required></textarea>
                                     <label for="mensaje">Mensaje</label>
                                 </div>
                             </div>
@@ -289,30 +290,48 @@
                     </form>
                 </div>
             </div>
-            <!-- Script habilitar boton envio + simulacion envio local -->
+
             <script>
                 const form = document.getElementById('formulario');
                 const enviarButton = document.getElementById('enviar');
                 const terminosCheckbox = document.getElementById('terminos');
-
+                const successMessage = document.createElement('div'); // Crea un elemento para el mensaje
+            
+                // Configuración del mensaje
+                
+                successMessage.style.color = "green";
+                successMessage.style.fontSize = "16px";
+                successMessage.style.marginTop = "10px";
+                successMessage.style.display = "none"; // Oculto inicialmente
+            
+                // Agrega el mensaje al DOM, justo después del formulario
+                form.parentElement.appendChild(successMessage);
+            
+                // Habilitar o deshabilitar el botón de enviar según el checkbox
                 terminosCheckbox.addEventListener('change', () => {
                     enviarButton.disabled = !terminosCheckbox.checked;
                 });
-                document.addEventListener("DOMContentLoaded", function () {
-                    const form = document.getElementById("formulario");
+            
+                // Evento para mostrar el mensaje al enviar
+                document.addEventListener("DOMContentLoaded", () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const status = urlParams.get("status");
+
+                if (status === "success") {
                     const successMessage = document.getElementById("successMessage");
+                    successMessage.style.display = "block";
+                    successMessage.innerText = "Gracias por tu mensaje. ¡Dios te bendiga!";
 
-                    form.addEventListener("submit", function (event) {
-                        event.preventDefault(); // Evita el envío del formulario
+                    // Opcional: Ocultar el mensaje después de 10 segundos
+                    setTimeout(() => {
+                        successMessage.style.display = "none";
+                    }, 10000);
+    }
+});   
 
-                        // Simula el envío del formulario (puedes reemplazarlo por lógica real)
-                        setTimeout(() => {
-                            successMessage.classList.remove("hidden"); // Muestra el mensaje de éxito
-                            form.reset(); // Limpia el formulario
-                        }, 500); // Simulación de un tiempo de espera para envío
-                    });
-                });
             </script>
+
+
         </div>
     </div>
     </div>
@@ -341,9 +360,9 @@
                         <h4 class="text-white mb-4">Información de contacto</h4>
                         <a href=""><i class="fa fa-map-marker-alt me-2"></i> C.de Fuentelviejo, 37, San Blas-Canillejas,
                             28022 Madrid</a>
-                            <a href="tel:+34644740559"><i class="fas fa-phone me-2"></i>+34 644 74 05 59</a>
-                            <a href="mailto:contacto@asisve.org"><i class="fas fa-envelope me-2"></i> contacto@asisve.org</a>
-                           <div class="d-flex align-items-center">
+                        <a href=""><i class="fas fa-envelope me-2"></i> contacto@asisve.org</a>
+                        <a href=""><i class="fas fa-phone me-2"></i>+34644740559</a>
+                        <div class="d-flex align-items-center">
                             <a href="https://www.tiktok.com/@aso.asisve.manoayuda"
                                 class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
                                     class="fab fa-tiktok text-white"></i></a>
@@ -383,7 +402,6 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="/js/validacionesJS.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>

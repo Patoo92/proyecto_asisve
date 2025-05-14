@@ -1,0 +1,50 @@
+/* Estilos para el banner de cookies */
+#cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 20px;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    border-top: 4px solid #3D9970;
+}
+
+.cookie-content {
+    max-width: 70%;
+    font-size: 14px;
+}
+
+.cookie-buttons button {
+    background-color: #3D9970;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.cookie-buttons button:nth-child(2) {
+    background-color: #FF4136;
+}
+
+#cookie-consent a {
+    color: #FFDC00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#cookie-consent a:hover {
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    flex-shrink: 0;
+}

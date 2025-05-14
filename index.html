@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <title>ASISVE</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Asociación ASISVE, ayuda social, voluntariado, asistencia" name="keywords">
-    <meta content="ASISVE es una organización dedicada a brindar asistencia y apoyo a quienes más lo necesitan." name="description">
-    
+    <meta content="" name="keywords">
+    <meta content="ASISVE - Ayuda en acción, hazte voluntario y transforma vidas." name="description">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +21,7 @@
 
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
@@ -30,18 +30,27 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+     <link rel="stylesheet" href="/css/cookies.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6QT0R39KS"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-P6QT0R39KS');
+</script>
 
 <body>
 
     <!-- Spinner Start -->
-        <div id="spinner" aria-hidden="true" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-
+    <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="visually-hidden">Cargando...</span>
-
+            <span class="sr-only">Cargando...</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -54,7 +63,7 @@
                 <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                     <div class="d-flex flex-wrap">
                         <a href="https://maps.app.goo.gl/xyM9AFHq11JRcjXM9" class="text-muted me-4"><i
-                                class="fas fa-map-marker-alt text-white me-2"></i>Ubicacion</a>
+                                class="fas fa-map-marker-alt --bs-white me-2"></i>Ubicacion</a>
                         <a href="https://wa.me/+34644740559" class="text-muted me-4"><i
                                 class="fas fa-phone-alt --bs-white me-2"></i>34644740559</a>
                         <a href="contact.html" class="text-muted me-0"><i
@@ -82,14 +91,14 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid sticky-top px-0">
-        <div class="position-relative bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
+        <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;">
         </div>
         <div class="container px-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
                 <a href="index.html" class="navbar-brand p-0">
-                    <img src="/img/logo_asisve.webp" style=" height: 50px;" alt="Logo">
+                    <img src="/img/logo_asisve.webp" loading="lazy" style="width: 100; height: 50px;" alt="Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -159,7 +168,7 @@
     <div class="header-carousel owl-carousel">
         <div class="header-carousel-item">
             <div class="header-carousel-item-img-1">
-                <img src="/img/carrusel_1.webp" class="img-fluid w-100" alt="Image">
+                <img src="/img/carrusel_1.webp" loading="lazy" class="img-fluid w-100" alt="Image">
             </div>
             <div class="carousel-caption">
                 <div class="carousel-caption-inner text-start p-3">
@@ -168,17 +177,14 @@
                     <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s"
                         style="animation-delay: 1.5s;">Ayuda en acción, hazte voluntario.
                     </p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated"
-                        data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;"
-                        href="contact.html">Quiero ser
-                        voluntario</a>
+                    <a href="contact.html" class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4" aria-label="Quiero ser voluntario">Quiero ser voluntario</a>
                     <!-- <a class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Read More</a> -->
                 </div>
             </div>
         </div>
         <div class="header-carousel-item mx-auto">
             <div class="header-carousel-item-img-2">
-                <img src="img/carrusel_2.webp" class="img-fluid w-100" alt="Image">
+                <img src="/img/carrusel_2.webp" loading="lazy" class="img-fluid w-100" alt="Image">
             </div>
             <div class="carousel-caption">
                 <!-- <div class="carousel-caption-inner text-center p-3"> -->
@@ -193,7 +199,7 @@
         </div>
         <div class="header-carousel-item">
             <div class="header-carousel-item-img-3">
-                <img src="img/carrusel_3.webp" class="img-fluid w-100" alt="Image">
+                <img src="/img/carrusel_3.webp" loading="lazy" class="img-fluid w-100" alt="Image">
             </div>
             <div class="carousel-caption">
                 <!-- <div class="carousel-caption-inner text-end p-3"> -->
@@ -210,81 +216,109 @@
     <!-- Carousel End -->
 
 
-<!-- Services Start -->
-<div class="container-fluid service py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h1>Servicios de ASISVE</h1>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 g-3 justify-content-center text-center">
-            <div class="col wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item bg-light rounded">
-                    <div class="service-img">
-                        <img src="/img/entrega_alimentos.JPG" class="img-fluid w-100 rounded-top" alt="Entrega de alimentos">
-                    </div>
-                    <div class="service-content text-center p-4">
-                        <a href="#" class="h4 mb-3 d-inline-flex text-start" aria-label="Jornada alimentos">Jornada alimentos</a>
-                        <p>Proveemos alimentos esenciales a familias migrantes vulnerables. <br> </p>
+    <!-- Services Start -->
+    <div class="container-fluid service py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1>Servicios de ASISVE</h1>
+            </div>
+            <div class="row g-3 justify-content-center text-center">
+                <!-- Cambié g-4 a g-3 para reducir espacio entre servicios -->
+                <div class="col-md-6 col-lg-4 col-xl-2-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- col-xl-2-4 para cinco columnas -->
+                    <div class="service-item bg-light rounded">
+                        <div class="service-img">
+                            <img src="/img/entrega_alimentos.JPG" loading="lazy" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="h4 mb-4 d-inline-flex text-start">Jornada alimentos</a>
+                                <p class="mb-4">Proveemos alimentos esenciales a familias migrantes en situación de
+                                    vulnerabilidad. Cada semana, distribuimos cestas que incluyen productos básicos para
+                                    garantizar una alimentación balanceada y contribuir al bienestar de quienes
+                                    más lo necesitan</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item bg-light rounded">
-                    <div class="service-img">
-                        <img src="/img/refugio.jpg" class="img-fluid w-100 rounded-top" alt="Refugio Temporal">
-                    </div>
-                    <div class="service-content text-center p-4">
-                        <a href="#" class="h4 mb-3 d-inline-flex text-start" aria-label="Refugio Temporal">Refugio Temporal</a>
-                        <p>Ofrecemos un lugar seguro para personas en riesgo, proporcionando un techo.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item bg-light rounded">
-                    <div class="service-img">
-                        <img src="/img/jornada_medica.JPG" class="img-fluid w-100 rounded-top" alt="Jornada Médica">
-                    </div>
-                    <div class="service-content text-center p-4">
-                        <a href="#" class="h4 mb-3 d-inline-flex text-start" aria-label="Jornada Médica">Jornada Médica</a>
-                        <p>Realizamos jornadas de salud y entregamos medicamentos bajo receta médica.</p>
+                <div class="col-md-6 col-lg-4 col-xl-2-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded">
+                        <div class="service-img">
+                            <img src="/img/refugio.jpg" loading="lazy" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="h4 mb-4 d-inline-flex text-start">Refugio Temporal</a>
+                                <p class="mb-4">Ofrecemos un lugar seguro para personas en riesgo, proporcionando un
+                                    techo temporal. Nuestro refugio busca ser más que un espacio físico: es un lugar de
+                                    esperanza, donde quienes enfrentan situaciones críticas pueden sentirse
+                                    acogidos y protegidos.</p>
+                                <br>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item bg-light rounded">
-                    <div class="service-img">
-                        <img src="/img/voluntariado.JPG" class="img-fluid w-100 rounded-top" alt="Voluntariado">
-                    </div>
-                    <div class="service-content text-center p-4">
-                        <a href="#" class="h4 mb-3 d-inline-flex text-start" aria-label="Voluntariado">Voluntariado</a>
-                        <p>Ser voluntario fortalece habilidades y genera un impacto positivo.</p>
+                <div class="col-md-6 col-lg-4 col-xl-2-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item bg-light rounded">
+                        <div class="service-img">
+                            <img src="img/jornada_medica.JPG" loading="lazy" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="h4 mb-4 d-inline-flex text-start">Jornada Medica</a>
+                                <p class="mb-4"> En nuestra organización, también brindamos jornadas de salud. Además,
+                                    recibimos donaciones de medicamentos, los cuales son entregados de manera segura y
+                                    responsable por nuestro personal especializado, siempre bajo receta médica.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col wow fadeInUp" data-wow-delay="0.7s">
-                <div class="service-item bg-light rounded">
-                    <div class="service-img">
-                        <img src="/img/ropero.jpg" class="img-fluid w-100 rounded-top" alt="Ropero Solidario">
+                <div class="col-md-6 col-lg-4 col-xl-2-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item bg-light rounded">
+                        <div class="service-img">
+                            <img src="/img/voluntariado.JPG" loading="lazy" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="h4 mb-4 d-inline-flex text-start">Voluntariado <br> <br></a>
+                                <p class="mb-4">Ser voluntario es más que donar tiempo; es una experiencia que fortalece
+                                    habilidades, y genera un impacto positivo. A través del compromiso, empatía y
+                                    liderazgo mientras encuentras propósito y satisfacción. Únete para crecer y ser
+                                    parte del cambio.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-content text-center p-4">
-                        <a href="#" class="h4 mb-3 d-inline-flex text-start" aria-label="Ropero Solidario">Ropero Solidario</a>
-                        <p>Contamos con prendas para toda la familia gracias a donaciones generosas.</p>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-2-4 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded">
+                        <div class="service-img">
+                            <img src="/img/ropero.jpg" loading="lazy" class="img-fluid w-100 rounded-top" alt="">
+                        </div>
+                        <div class="service-content text-center p-4">
+                            <div class="service-content-inner">
+                                <a href="#" class="h4 mb-4 d-inline-flex text-start">Ropero Solidario</a>
+                                <p class="mb-4">Contamos con prendas para toda la familia: desde abrigos para el
+                                    invierno hasta ropa ligera para el verano, así como calzado y accesorios. A través
+                                    de donaciones generosas y el trabajo de nuestros voluntarios, aseguramos que cada
+                                    persona reciba lo necesario para sentirse cómodo en su día a día.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
     <!-- Services End -->
-    
+    <!-- Testimonial Start -->
     <div class="container-fluid testimonial bg-light py-5" id="testimonios">
         <div class="container py-5">
             <div class="row g-4 align-items-center">
                 <div class="col-xl-4 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="h-100 rounded">
-                        <h4 class="text-primary">Vidas transformadas</h4>
+                        <h4 class="text-primary"> Vidas transformadas </h4>
                         <h1 class="display-4 mb-4">Historias que te conmoverán</h1>
+                        <!--<p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque soluta unde itaque. Consequatur quam odit blanditiis harum veritatis porro.</p>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Lee todas las Historias <i class="fas fa-arrow-right ms-2"></i></a> -->
                     </div>
                 </div>
                 <div class="col-xl-8">
@@ -293,65 +327,178 @@
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
                                 <p class="mt-4">"Gracias a Dios y a la asociación Mano Ayuda, que me abrió las puertas
-                                    cuando más lo necesitaba, en esos momentos difíciles."<br>
-                                    <strong>Jesús Silva</strong></p>
+                                    cuando más lo necesitaba. Hoy tengo a mi familia aquí, y eso no hubiera sido posible
+                                    sin el apoyo que me dieron en esos momentos difíciles." <br>
+                                    Jesús Silva.</p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
                         <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                <p class="mt-4">"Gracias a ASSIVE y su refugio, encontramos un lugar donde
-                                    empezar nuestra vida en España."
-                                    <br><strong>Owen & María José</strong></p>
+                                <p class="mt-4"> "Gracias a la ONG y su refugio, encontramos un lugar seguro desde donde
+                                    empezar nuestra vida en España, permitiéndonos dar los primeros pasos hacia nuestros
+                                    sueños." <br><br>
+                                    Owen & María Jóse</p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
                         <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                <p class="mt-4">"Encantado de trabajar acá de la mano del director Ricardo y
-                                    todo el equipo de voluntarios que siempre lo dan todo en todas las jornadas.”<br>
-                                    <strong>César Obando</strong>, Coordinador</p>
+                                <p class="mt-4"> “Complacido de trabajar acá de la mano del director general Ricardo y
+                                    todo el equipo de voluntarios que siempre lo dan todo en todas las jornadas”
+                                    <br> <br> <br>
+                                    Cesar Obando
+                                    Coordinador.
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.9s">
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                <p class="mt-4">“Si entregamos algo, debe hacerse con la misma dedicación que lo
-                                    haríamos para nosotros mismos. Cada persona ahí afuera es parte de
-                                    nuestra familia”<br>
-                                    <strong>Ricardo Mazzini</strong>, Director General</p>
+                                <p class="mt-4"> “Si entregamos algo, debe hacerse con la misma dedicación que lo
+                                    haríamos para nosotros mismos. Cada persona que está ahí fuera es como parte de
+                                    nuestra familia, por lo que es esencial ofrecer productos de calidad"
+                                    <br> Ricardo Mazzini.
+                                    Director General
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="1.1s">
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                <p class="mt-4">"Súper agradecida por toda la labor que hacéis y encantada de venir a
-                                    dar los talleres y ayudar a cada persona a dar los primeros pasos en España."<br>
-                                    <strong>Mari Guerrero</strong>, Trabajadora social Diaconia Madrid</p>
+                                <p class="mt-4"> Super agradecida por toda la labor que haceis y encantada de venir a
+                                    dar los talleres
+                                    <br> <br> <br>
+                                    Mari Guerrero
+                                    Trabajadora social Diaconia Madrid
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="1.3s">
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                <p class="mt-4">“Lo mejor de ser voluntario es ver a las personas que encuentran algo
-                                    en el ropero que necesitan en ese momento de manera gratuita y es una bendición.”<br>
-                                    <strong>Naibert Sánchez</strong>, Voluntario</p>
+                                <p class="mt-4"> “Lo mejor de ser voluntario es ver a las personas que encuentran algo
+                                    en el ropero que necesitan en ese momento de manera gratuita y es una bendición de
+                                    Dios”
+                                    <br> <br>
+                                    Naibert Sánchez.
+                                    Voluntario
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="1.5s">
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                <p class="mt-4">“Nuestra labor, incluye ayuda alimentaria, ropa de segunda mano en
-                                    buen estado,participar como voluntarios, talleres y medicina.”<br>
-                                    <strong>Juan Carlos Viana</strong>, Coordinador</p>
+                                <p class="mt-4"> “En nuestra labor, incluimos ayuda alimentaria, ropa de segunda mano,
+                                    pero en buen estado, integración a la sociedad con la posibilidad de participar como
+                                    voluntarios, talleres, medicina, trabajo, entre otras.”
+                                    <br>
+                                    Juan Carlos Viana.
+                                    Coordinador
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="1.7s">
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
                             <div class="d-flex">
                                 <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
-                                <p class="mt-4">"La gente tiene mucha necesidad de aclarar todas las dudas que tienen,
-                                    y las de extranjería son las que más dudas generan."<br>
-                                    <strong>Laura Nechita</strong>, Trabajadora social Diaconia Madrid</p>
+                                <p class="mt-4"> "La gente tiene mucha necesidad de aclarar todas las dudas que tienen,
+                                    y las de extranjería son las que más dudas se tiene”
+                                    <br> <br>
+                                    Laura Nechita.
+                                    Trabajadora social Diaconia Madrid
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-white rounded p-4 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="d-flex">
+                                <div><i class="fas fa-quote-left fa-3x text-dark me-3"></i></div>
+                                <p class="mt-4"> "Agradezco mucho a asociación ASISVE, gracias por regalar los alimentos
+                                    que nos dan. Es de mucha ayuda a mi y a mi familia."
+                                    <br> <br> <br>
+                                    Sebastian Salas.
+                                    Beneficiario
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <div class="my-auto text-end">
+                                </div>
+                                <div class="bg-white rounded-circle ms-3">
+                                    <!-- <img src="/img/testimonios.webp"
+                                        style="width: 80px; height: 80px; border: 1px solid; border-color: var(--bs-primary);"
+                                        alt=""> -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -359,7 +506,8 @@
             </div>
         </div>
     </div>
-    
+    <!-- Testimonial End -->
+
 
 
     <!-- Sección de Google Maps -->
@@ -399,7 +547,7 @@
                                 </div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/amazón.png" style="width: 220px; height: 100px; " alt="">
+                                    <img src="/img/amazón.png" loading="lazy" style="width: 220px; height: 100px; " alt="">
 
                                 </div>
                             </div>
@@ -412,7 +560,7 @@
                                 </div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/colaborador_alcamar.webp" style="width: 220px; height: 100px; "
+                                    <img src="/img/colaborador_alcamar.webp" loading="lazy" style="width: 220px; height: 100px; "
                                         alt="">
 
                                 </div>
@@ -424,7 +572,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/colaborador_altius.png" style="width: 220px; height: 100px; " alt="">
+                                    <img src="/img/colaborador_altius.png" loading="lazy" style="width: 220px; height: 100px; " alt="">
                                 </div>
                             </div>
                         </div>
@@ -434,7 +582,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/Banco.alimentos..png" style="width: 100; height: 100px; " alt="">
+                                    <img src="/img/Banco.alimentos..png" loading="lazy" style="width: 100; height: 100px; " alt="">
                                 </div>
                             </div>
                         </div>
@@ -444,7 +592,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/frioval.jfif" style="width: 220px; height: 100px; " alt="">
+                                    <img src="/img/frioval.jfif" loading="lazy" style="width: 220px; height: 100px; " alt="">
                                 </div>
                             </div>
                         </div>
@@ -454,7 +602,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/colaborador_diaconia.png" style="width: 220px; height: 100px; "
+                                    <img src="/img/colaborador_diaconia.png" loading="lazy" style="width: 220px; height: 100px; "
                                         alt="">
 
                                 </div>
@@ -466,7 +614,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/colaborador_madrid.webp" style="width: 220px; height: 100px; "
+                                    <img src="/img/colaborador_madrid.webp" loading="lazy" style="width: 220px; height: 100px; "
                                         alt="">
 
                                 </div>
@@ -478,7 +626,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/cropped-logo_halo3.png" style="width: 220px; height: 100px; " alt="">
+                                    <img src="/img/cropped-logo_halo3.png" loading="lazy" style="width: 220px; height: 100px; " alt="">
 
                                 </div>
                             </div>
@@ -489,7 +637,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/Logo_Shukran.png" style="width: 220px; height: 100px; " alt="">
+                                    <img src="/img/Logo_Shukran.png" loading="lazy" style="width: 220px; height: 100px; " alt="">
 
                                 </div>
                             </div>
@@ -500,7 +648,7 @@
                                 <div class="my-auto text-end"></div>
                                 <div class="bg-white rounded-circle ms-3">
 
-                                    <img src="/img/colaborador_remar.png" style="width: 220px; height: 100px; " alt="">
+                                    <img src="/img/colaborador_remar.png" loading="lazy" style="width: 220px; height: 100px; " alt="">
 
                                 </div>
                             </div>
@@ -511,6 +659,44 @@
         </div>
     </div>
     <!-- Colaboradores Fin -->
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent">
+        <div class="cookie-content">
+            <p><strong>Aviso de Cookies</strong><br>
+                Usamos cookies para mejorar tu experiencia en el sitio. Al aceptar, consientes el uso de las siguientes
+                cookies:
+            </p>
+            <ul>
+                <li><strong>Cookies necesarias:</strong> Esenciales para el funcionamiento del sitio web.</li>
+                <li><strong>Cookies de rendimiento:</strong> Recopilan datos anónimos sobre cómo interactúas con la
+                    página (por ejemplo, Google Analytics).</li>
+                <li><strong>Cookies de publicidad:</strong> Utilizadas para mostrar anuncios personalizados.</li>
+            </ul>
+            <p>
+                Google Analytics recopila datos como la dirección IP (anonimizada), el dispositivo, el navegador, las
+                páginas visitadas y la ubicación geográfica aproximada para mejorar el rendimiento del sitio.<br>
+                Puedes gestionar tus preferencias en cualquier momento. Para más información, consulta nuestra
+                <a href="/politica_cookies.html">Política de Cookies</a>.
+            </p>
+            <label>
+                <input type="checkbox" id="necessary-cookies" checked disabled>
+                Cookies necesarias
+            </label><br>
+            <label>
+                <input type="checkbox" id="performance-cookies">
+                Cookies de rendimiento
+            </label><br>
+            <label>
+                <input type="checkbox" id="advertising-cookies">
+                Cookies de publicidad
+            </label>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()">Aceptar</button>
+            <button onclick="rejectCookies()">Rechazar</button>
+        </div>
+    </div>
 
 
     <!-- Footer Start -->
@@ -582,10 +768,13 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-
+    
+    
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="/js/cookies.js" defer></script>
+
+
 </body>
 
 </html>
