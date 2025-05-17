@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>ASISVE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="">
+    <meta name="description" content="ASISVE - Ayuda en acción, hazte voluntario y transforma vidas.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/cookies.css">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Paleta de colores sugerida */
+        :root {
+            --vino: #7B1E3B;
+            /* 7e2b34 */
+            --blanco: #FFFFFF;
+            --naranja-calido: #f1720a;
+            --gris-suave: #E5E5E5;
+        }
+
+        /* Aplicar la paleta de colores a elementos específicos */
+        body {
+            background-color: var(--blanco);
+            color: #333;
+            /* Color de texto general, ajústalo si es necesario */
+        }
+
+        .bg-vino {
+            background-color: var(--vino) !important;
+        }
+
+        .text-vino {
+            color: var(--vino) !important;
+        }
+
+        .bg-blanco {
+            background-color: var(--blanco) !important;
+        }
+
+        .text-blanco {
+            color: var(--blanco) !important;
+        }
+
+        .btn-naranja-calido {
+            background-color: var(--naranja-calido);
+            color: var(--blanco);
+            border-color: var(--naranja-calido);
+        }
+
+        .btn-naranja-calido:hover {
+            background-color: #f28c3d;
+            /* Un tono más oscuro al pasar el ratón */
+            border-color: #f28c3d;
+        }
+
+        .text-gris-suave {
+            color: var(--gris-suave) !important;
+        }
+
+        .btn-outline-vino {
+            color: var(--vino);
+            border-color: var(--vino);
+        }
+
+        .btn-outline-vino:hover {
+            background-color: var(--vino);
+            color: var(--blanco);
+        }
+
+        .topbar {
+            background-color: var(--vino);
+        }
+
+        .topbar a {
+            color: var(--blanco) !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #333;
+            /* Asegurar que el texto del menú sea visible */
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: var(--naranja-calido);
+        }
+
+        .btn-primary {
+            background-color: var(--vino);
+            border-color: var(--vino);
+        }
+
+        .btn-primary:hover {
+            background-color: #5e162e;
+            /* Un tono más oscuro al pasar el ratón */
+            border-color: #5e162e;
+        }
+
+        .footer {
+            background-color: var(--vino);
+        }
+
+        .bg-light {
+            background-color: var(--gris-suave) !important;
+            /* Usar el gris suave para fondos ligeros */
+        }
+
+        .testimonial-item {
+            background-color: var(--blanco);
+        }
+
+        .service-item {
+            background-color: var(--blanco);
+        }
+
+        .copyright {
+            background-color: #333;
+            /* Un tono oscuro para el copyright */
+        }
+
+        .header-carousel .carousel-caption h1,
+        .header-carousel .carousel-caption p {
+            color: var(--blanco) !important;
+        }
+
+        .header-carousel .carousel-caption .btn {
+            color: var(--blanco) !important;
+        }
+
+        .header-carousel .carousel-caption .btn-primary {
+            background-color: var(--naranja-calido);
+            border-color: var(--naranja-calido);
+        }
+
+        .header-carousel .carousel-caption .btn-primary:hover {
+            background-color: #f28c3d;
+            border-color: #f28c3d;
+        }
+
+        #cookie-consent {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: var(--blanco);
+        }
+
+        #cookie-consent .cookie-buttons button {
+            background-color: var(--naranja-calido);
+            color: var(--blanco);
+            border-color: var(--naranja-calido);
+        }
+
+        #cookie-consent .cookie-buttons button:hover {
+            background-color: #f28c3d;
+            border-color: #f28c3d;
+        }
+
+        /* Estilo para el texto del header con fondo */
+        .header-text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            /* Sombra oscura para mejor contraste */
+        }
+    </style>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6QT0R39KS"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-P6QT0R39KS');
+</script>
+
+<body>
+
+    <div id="spinner"
+        class="show bg-blanco position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-naranja-calido" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+    <div class="container-fluid topbar px-0 d-none d-lg-block">
+        <div class="container px-0">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="https://maps.app.goo.gl/xyM9AFHq11JRcjXM9" class="text-blanco me-4"><i
+                                class="fas fa-map-marker-alt --bs-white me-2"></i>Ubicacion</a>
+                        <a href="https://wa.me/+34644740559" class="text-blanco me-4"><i
+                                class="fas fa-phone-alt --bs-white me-2"></i>34644740559</a>
+                        <a href="contact.html" class="text-blanco me-0"><i
+                                class="fas fa-envelope me-2"></i>contacto@asisve.org</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="https://www.tiktok.com/@aso.asisve.manoayuda"
+                            class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-tiktok text-blanco"></i></a>
+                        <a href="https://www.instagram.com/aso.asisve.manoayuda/"
+                            class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-instagram text-blanco"></i></a>
+                        <a href="https://wa.me/+34644740559"
+                            class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                class="fab fa-whatsapp text-blanco"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid sticky-top px-0">
+        <div class="position-absolute bg-vino" style="left: 0; top: 0; width: 100%; height: 100%;">
+        </div>
+        <div class="container px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+                    <img src="/img/logo_asisve.webp" loading="lazy" style="width: 100px; height: 50px;" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                        <a href="about.html" class="nav-item nav-link">Sobre Nosotros</a>
+                        <a href="servicios.html" class="nav-item nav-link">Servicios</a>
+                        <a href="404.html" class="nav-item nav-link">Proyectos</a>
+                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        <a href="voluntariado.html" class="nav-item nav-link">Voluntariado</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                        <a href="404.html"
+                            class="btn btn-outline-vino btn-primary rounded-pill text-blanco py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Iniciar
+                            sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <header class="text-blanco py-5"
+        style="background-image: url('/img/bg_voluntario.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container text-center">
+            <h1 class="display-1 fw-bold header-text-shadow"><i class="bi bi-heart-fill text-danger
+                "></i> Únete al Voluntariado
+                ASISVE</h1>
+            <p class="lead header-text-shadow">Alimentamos esperanza. Cada sábado, en Madrid.</p>
+            <p class="lead header-text-shadow">Tu tiempo puede marcar la diferencia en la vida de quienes más lo
+                necesitan.</p>
+            <a href="#voluntariado" class="btn btn-naranja-calido btn-lg mt-3"><i class="bi bi-arrow-down-circle"></i>
+                Descubre cómo ayudar</a>
+        </div>
+    </header>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="/img/Voluntario_ayudando.jpg" alt="Voluntarios ayudando"
+                        class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="display-4 fw-semibold"><i class="bi bi-heart-fill text-danger"></i> Voluntariado Asisve
+                    </h2>
+                    <br> <br>
+                    <p class="text-vino">Ayuda directa a quienes más lo necesitan.</p>
+                    <p class="text-vino">Cada sábado, un grupo de voluntarios de Asisve se reúne para entregar
+                        alimentos a personas que atraviesan una situación económica crítica.</p>
+                    <p class="text-vino">Con el apoyo de empresas colaboradoras que donan productos básicos,
+                        organizamos
+                        <strong>Entregamos combos alimentarios</strong> para ayudar a quienes aún no tienen trabajo ni
+                        recursos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 text-center bg-vino text-blanco">
+        <div class="container">
+            <h2 class="display-4 text-blanco ">¿A quién está dirigida esta ayuda?</h2>
+            <p class="lead">Principalmente a personas migrantes recién llegadas a España, que se encuentran:</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4 my-2">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-x-octagon-fill text-warning h2 me-2"></i>
+                        <p class="lead m-0">Sin trabajo ni ingresos</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-exclamation-triangle-fill text-warning h2 me-2"></i>
+                        <p class="lead m-0">Sin acceso a ayudas estatales</p>
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-heart-fill text-danger h2 me-2"></i>
+                        <p class="lead m-0">En situación de urgencia alimentaria</p>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-4" style="font-size:2.5rem;">La entrega se realiza de forma organizada, respetuosa y cuidada, priorizando la
+                dignidad de quienes reciben la ayuda.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="display-4 fw-semibold">Un sábado en Asisve</h2>
+            <p class="lead">Así es como trabajamos cada sábado en nuestra sede de Madrid.</p>
+            <a href="https://www.instagram.com/" target="_blank" class="btn btn-outline-vino btn-lg">
+                <img src="/img/Instagram_icon.png" alt="Instagram Logo" class="img-fluid mt-3"
+                    style="max-width: 150px;"> <br> <br>
+                <i class="bi bi-play-btn-fill"></i> Ver videos en Instagram</a>
+        </div>
+    </section>
+
+    <section class="py-5 bg-blanco text-naranja-calido text-center">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center">
+                    <div class="card bg-gris-suave text-danger shadow-lg">
+                        <div class="card-body">
+                            <i class="bi bi-heart-fill " style="font-size: 3rem;"></i>
+                            <h3 class="card-title display-5 text-vino  fw-semibold">¿Cómo podes colaborar?</h3>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-house-door me-2 text-naranja-calido"></i>
+                                Organización del espacio</p>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-people me-2 text-naranja-calido"></i>Recepción de
+                                beneficiarios/as</p>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-truck me-2 text-naranja-calido"></i>Apoyo al
+                                equipo logístico</p>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-box-seam me-2 text-naranja-calido"></i>
+                                Clasificación de alimentos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="card bg-vino text-blanco shadow-lg">
+                        <div class="card-body">
+                            <i class="bi bi-clock-fill" style="font-size: 3rem;"></i>
+                            <h3 class="card-title display-5 text-blanco">Horario del Voluntariado Asisve</h3>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-calendar-event-fill"></i> ¿Cuándo? <strong>Todos
+                                    los sábados por la mañana</strong></p>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-hourglass-split"></i> Duración: <strong>Entre 3 y
+                                    4 horas</strong></p>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-geo-alt-fill"></i> Lugar: <strong>Sede central de
+                                    Asisve - Madrid</strong></p>
+                            <hr>
+                            <p class="card-text lead"><i class="bi bi-heart-fill"></i> ¡Sumate cuando puedas! Tu tiempo
+                                hace la diferencia.</p>
+                            <hr>
+                            <i class="bi bi-heart-fill" style="font-size: 2rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="display-4 fw-semibold">Nuestro voluntariado alimenta esperanza.</h2>
+            <div class="row justify-content-around">
+                <div class="col-md-4 bg-blanco p-4 rounded shadow-lg my-3">
+                    <h3 class="display-5 fw-semibold"><i class="bi bi-question-circle-fill text-vino"></i> ¿Por qué
+                        sumarte?</h3>
+                    <ul class="list-unstyled lead">
+                        <li>Porque tu tiempo tiene impacto inmediato.</li>
+                        <li>Porque estás ayudando a personas que lo necesitan hoy, acá.</li>
+                        <li>Porque formar parte del equipo de voluntariado de Asisve es construir comunidad.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 bg-blanco p-4 rounded shadow-lg my-3">
+                    <img src="/img/voluntarios sonriendo.jpg" alt="Voluntarios sonriendo"
+                        class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-4 bg-blanco p-4 rounded shadow-lg my-3">
+                    <h3 class="display-5 fw-semibold"><i class="bi bi-gift-fill text-vino"></i> ¿Qué te ofrecemos?
+                    </h3>
+
+                    <ol class="list-unstyled lead">
+                        <li>Capacitación breve para conocer el funcionamiento del voluntariado.</li>
+                        <li>Un entorno humano, colaborativo y organizado.</li>
+                        <li>Certificación de horas de voluntariado si la necesitás.</li>
+                        <li>Un espacio para compartir, aprender y ayudar con otros/as.</li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="display-4 fw-semibold">Conoce la experiencia de nuestros voluntarios ASISVE</h2>
+            <a href="https://www.instagram.com/" target="_blank" class="btn btn-outline-vino btn-lg">
+                <img src="/img/Instagram_icon.png" alt="Instagram Logo" class="img-fluid mt-3"
+                    style="max-width: 150px;"> <br> <br>
+                <i class="bi bi-instagram"></i> Ver en Instagram</a>
+        </div>
+    </section>
+<!-- 
+    <section class="py-5 bg-vino text-center text-blanco">
+        <div class="container">
+            <h2 class="display-3 fw-bold text-naranja-calido bg-warning">SOMOS REFUGIO</h2>
+            <p class="lead">En ASISVE SE HA AYUDADO A CIENTOS DE FAMILIAS CON UN TECHO PROVISIONAL</p>
+            <p>El servicio de acogida: desde este servicio se ofrecen recursos de alojamiento
+                temporal, que dan respuesta a la necesidad de alojamiento y cobertura de las necesidades básicas de las
+                personas atendidas, contribuyendo a disminuir el grado de vulnerabilidad que presentan.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="display-4 fw-semibold">Tu donación puede dar techo a quien no tiene nada.</h2>
+            <p class="lead">Ayudá a sostener nuestro refugio temporal para personas migrantes en situación crítica.</p>
+            <div class="mt-4">
+                <button class="btn btn-outline-vino me-2">30€</button>
+                <button class="btn btn-outline-vino me-2">90€</button>
+                <button class="btn btn-outline-vino me-2">120€</button>
+                <button class="btn btn-outline-vino">Otra</button>
+            </div>
+            <button class="btn btn-naranja-calido btn-lg mt-3">Quiero aportar</button>
+        </div>
+    </section> -->
+
+    <div id="cookie-consent">
+        <div class="cookie-content">
+            <p><strong>Aviso de Cookies</strong><br>
+                Usamos cookies para mejorar tu experiencia en el sitio. Al aceptar, consientes el uso de las siguientes
+                cookies:
+            </p>
+            <ul>
+                <li><strong>Cookies necesarias:</strong> Esenciales para el funcionamiento del sitio web.</li>
+                <li><strong>Cookies de rendimiento:</strong> Recopilan datos anónimos sobre cómo interactúas con la
+                    página (por ejemplo, Google Analytics).</li>
+                <li><strong>Cookies de publicidad:</strong> Utilizadas para mostrar anuncios personalizados.</li>
+            </ul>
+            <p>
+                Google Analytics recopila datos como la dirección IP (anonimizada), el dispositivo, el navegador, las
+                páginas visitadas y la ubicación geográfica aproximada para mejorar el rendimiento del sitio.<br>
+                Puedes gestionar tus preferencias en cualquier momento. Para más información, consulta nuestra
+                <a href="/politica_cookies.html">Política de Cookies</a>.
+            </p>
+            <label>
+                <input type="checkbox" id="necessary-cookies" checked disabled>
+                Cookies necesarias
+            </label><br>
+            <label>
+                <input type="checkbox" id="performance-cookies">
+                Cookies de rendimiento
+            </label><br>
+            <label>
+                <input type="checkbox" id="advertising-cookies">
+                Cookies de publicidad
+            </label>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()">Aceptar</button>
+            <button onclick="rejectCookies()">Rechazar</button>
+        </div>
+    </div>
+
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s" style="background-color: var(--vino);">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-blanco mb-4">Mapa del sitio</h4>
+                        <a href="index.html" class="text-gris-suave"><i class="fas fa-angle-right me-2"></i> Inicio</a>
+                        <a href="about.html" class="text-gris-suave"><i class="fas fa-angle-right me-2"></i> Sobre
+                            Nosotros</a>
+                        <a href="servicios.html" class="text-gris-suave"><i class="fas fa-angle-right me-2"></i>
+                            Servicios</a>
+                        <a href="404.html" class="text-gris-suave"><i class="fas fa-angle-right me-2"></i> Proyectos</a>
+                        <a href="contact.html" class="text-gris-suave"><i class="fas fa-angle-right me-2"></i>
+                            Contacto</a>
+                        <a href="voluntariado.html" class="text-gris-suave"><i class="fas fa-angle-right me-2"></i>
+                            Voluntariado</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="text-blanco mb-4">Información de contacto</h4>
+                        <a href="#" class="text-gris-suave"><i class="fa fa-map-marker-alt me-2"></i> C.de
+                            Fuentelviejo, 37, San Blas-Canillejas,
+                            28022 Madrid</a>
+                        <a href="#" class="text-gris-suave"><i class="fas fa-envelope me-2"></i>
+                            contacto@asisve.org</a>
+                        <a href="tel:+34644740559" class="text-gris-suave"><i
+                                class="fas fa-phone me-2"></i>+34644740559</a>
+                        <div class="d-flex align-items-center">
+                            <a href="https://www.tiktok.com/@aso.asisve.manoayuda"
+                                class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                    class="fab fa-tiktok text-blanco"></i></a>
+                            <a href="https://www.instagram.com/aso.asisve.manoayuda/"
+                                class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                    class="fab fa-instagram text-blanco"></i></a>
+                            <a href="https://wa.me/34644740559"
+                                class="btn btn-primary btn-square rounded-circle nav-fill me-3"><i
+                                    class="fab fa-whatsapp text-blanco"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid copyright py-4" style="background-color: #333;">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-md-0">
+                    <span class="text-body"> © ASISVE <a href="index.html" class="text-naranja-calido"></a>Todos los
+                        derechos reservados.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="voluntariado.html" class="btn btn-naranja-calido btn-lg-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script src="js/main.js" defer></script>
+    <script src="/js/cookies.js" defer></script>
+
+</body>
+
+</html>
