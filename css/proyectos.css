@@ -1,0 +1,56 @@
+/* Estilos adicionales para la sección Proyectos ASISVE */
+#proyectos-asisve {
+    background-color: var(--gris-suave);  /* Usar variable si la tienes, sino #f8f9fa; */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#proyectos-asisve h2,
+#proyectos-asisve h3,
+#proyectos-asisve h4 {
+    color: var(--vino);  /* Usar variable si la tienes, sino #7B1E3B; */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+#proyectos-asisve img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+#proyectos-asisve ul.list-unstyled { /* Especificidad para evitar conflictos */
+    padding-left: 0;
+}
+
+#proyectos-asisve ul.list-unstyled li {
+    margin-bottom: 0.75rem;
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center;
+}
+
+#proyectos-asisve .badge {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+    margin-right: 0.4rem;
+}
+
+/* Carousel Styles */
+#proyectos-asisve .carousel-caption {
+    background-color: rgba(123, 30, 59, 0.7); /* var(--vino) con transparencia */
+    color: var(--blanco);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+#proyectos-asisve .carousel-control-prev,
+#proyectos-asisve .carousel-control-next {
+    background-color: rgba(123, 30, 59, 0.2); /* var(--vino) con transparencia */
+    width: 5%; /* Ajusta el ancho de los controles */
+}
+
+#proyectos-asisve .carousel-indicators {
+    background-color: rgba(123, 30, 59, 0.2); /* var(--vino) con transparencia */
+    bottom: 0;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
