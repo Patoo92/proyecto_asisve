@@ -30,7 +30,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-     <link rel="stylesheet" href="/css/cookies.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -660,58 +659,57 @@
     </div>
     <!-- Colaboradores Fin -->
 
-    <!-- Banner de cookies -->
-<div id="cookie-banner" class="container-fluid bg-white border-top shadow-lg py-3 px-4 d-none position-fixed bottom-0 start-0 end-0 z-3">
+    
+<!-- Overlay bloqueador -->
+<div id="cookie-overlay" 
+     style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1040; display: block;"></div>
+<!-- Banner de cookies --> 
+<div id="cookie-banner" class="container-fluid bg-dark text-white py-3 px-4 position-fixed bottom-0 start-0 end-0" 
+     style="display:block; z-index: 1050; /* más alto que la mayoría de modales bootstrap */">
   <div class="row align-items-center">
-    <div class="col-12 col-md-8 mb-3 mb-md-0">
-      <p class="mb-2 text-dark small">
-        Usamos cookies para mejorar tu experiencia. Consulta nuestra
-        <a href="/politica_cookies.html" class="text-success fw-semibold">Política de Cookies</a>.
-      </p>
+    <div class="col-12 col-md-8 small mb-2 mb-md-0">
+      Usamos cookies para mejorar tu experiencia. Consulta nuestra
+      <a href="/politica_cookies.html" class="text-white fw-semibold text-decoration-underline">Política de Cookies</a>.
     </div>
     <div class="col-12 col-md-4 d-grid gap-2 d-md-flex justify-content-md-end">
-      <button class="btn btn-outline-success btn-sm" onclick="openCookieConfig()">Configuración</button>
-      <button class="btn btn-outline-danger btn-sm" onclick="rejectCookies()">Rechazar</button>
-      <button class="btn btn-success btn-sm" onclick="acceptAllCookies()">Aceptar</button>
+      <button class="btn btn-outline-light btn-sm" onclick="openCookieConfig()">Configuración</button>
+      <button class="btn btn-outline-light btn-sm" onclick="rejectCookies()">Rechazar</button>
+      <button class="btn btn-sm text-white" style="background-color:#4B1E2F;" onclick="acceptAllCookies()">Aceptar</button>
     </div>
   </div>
 </div>
 
+
 <!-- Modal de configuración -->
 <div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-success text-white">
-        <h5 class="modal-title" id="cookieModalLabel">Configuración de Cookies</h5>
+    <div class="modal-content border-0">
+      <div class="modal-header" style="background-color: #4B1E2F;">
+        <h5 class="modal-title text-white" id="cookieModalLabel">Configuración de Cookies</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">
         <div class="form-check mb-2">
           <input class="form-check-input" type="checkbox" id="cookie-necessary" checked disabled>
-          <label class="form-check-label" for="cookie-necessary">
-            Cookies necesarias (siempre activas)
-          </label>
+          <label class="form-check-label" for="cookie-necessary">Cookies necesarias (siempre activas)</label>
         </div>
         <div class="form-check mb-2">
           <input class="form-check-input" type="checkbox" id="cookie-performance">
-          <label class="form-check-label" for="cookie-performance">
-            Cookies de rendimiento (Google Analytics)
-          </label>
+          <label class="form-check-label" for="cookie-performance">Cookies de rendimiento (Google Analytics)</label>
         </div>
         <div class="form-check mb-2">
           <input class="form-check-input" type="checkbox" id="cookie-advertising">
-          <label class="form-check-label" for="cookie-advertising">
-            Cookies de publicidad y redes sociales
-          </label>
+          <label class="form-check-label" for="cookie-advertising">Cookies de publicidad y redes sociales</label>
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button class="btn btn-success" onclick="saveCookiePreferences()">Guardar preferencias</button>
+        <button class="btn text-white" style="background-color:#4B1E2F;" onclick="saveCookiePreferences()">Guardar preferencias</button>
       </div>
     </div>
   </div>
 </div>
+
 
 
 
@@ -788,7 +786,9 @@
     
     <!-- Template Javascript -->
     <script src="js/main.js" defer></script>
-    <script src="/js/cookies.js" defer></script>
+    <script src="js/cookies.js" defer></script>
+
+
 
 
 </body>
