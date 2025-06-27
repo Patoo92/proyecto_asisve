@@ -74,7 +74,7 @@ function enableAnalytics(performance, advertising) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("cookie-banner").style.display = "block";
+  document.getElementById("cookie-banner");
 });
 
 
