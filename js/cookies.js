@@ -16,14 +16,14 @@ function getCookie(name) {
 
 function acceptAllCookies() {
   const config = { necessary: true, performance: true, advertising: true };
-  setCookie("cookie-consent", JSON.stringify(config), 365);
+  setCookie("cookie-consent", JSON.stringify(config), 90);
   enableAnalytics(config.performance, config.advertising);
   hideBanner();
 }
 
 function rejectCookies() {
   const config = { necessary: true, performance: false, advertising: false };
-  setCookie("cookie-consent", JSON.stringify(config), 365);
+  setCookie("cookie-consent", JSON.stringify(config), 90);
   hideBanner();
 }
 
@@ -31,7 +31,7 @@ function saveCookiePreferences() {
   const performance = document.getElementById("cookie-performance")?.checked || false;
   const advertising = document.getElementById("cookie-advertising")?.checked || false;
   const config = { necessary: true, performance, advertising };
-  setCookie("cookie-consent", JSON.stringify(config), 365);
+  setCookie("cookie-consent", JSON.stringify(config), 90);
   enableAnalytics(performance, advertising);
   hideBanner();
 
@@ -108,7 +108,7 @@ function saveCookiePreferences() {
   const performance = document.getElementById("cookie-performance").checked;
   const advertising = document.getElementById("cookie-advertising").checked;
   const config = { necessary: true, performance, advertising };
-  setCookie("cookie-consent", JSON.stringify(config), 365);
+  setCookie("cookie-consent", JSON.stringify(config), 90);
   enableAnalytics(performance, advertising);
   hideCookieBanner();
 }
