@@ -33,6 +33,8 @@ function enableAnalytics(performance, advertising) {
 function hideBanner() {
   const banner = document.getElementById("cookie-banner");
   if (banner) banner.style.display = "none";
+  const overlay = document.getElementById("cookie-overlay");
+  if (overlay) overlay.style.display = "none";
 }
 
 function acceptAllCookies() {
