@@ -558,6 +558,25 @@
 .service .service-item:hover .service-content .service-content-inner a.h4:hover {
     color: var(--bs-primary) !important;
 }
+
+.service-content a.btn-primary {
+    background-color: #4B1E2F;
+    border-color: #4B1E2F;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: 0.5em;
+    padding: 0.5em 1.2em;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.service-content a.btn-primary:hover,
+.service-content a.btn-primary:focus {
+    background-color: #7e2b34;
+    border-color: #7e2b34;
+    color: #fff;
+    text-decoration: none;
+}
 /*** Service End ***/
 
 /*** Testimonial Start ***/
@@ -647,16 +666,28 @@ input:valid, textarea:valid {
 }
 /* Igualar altura de las cards de servicios */
 .service-item {
+    min-height: 520px;
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-height: 450px; /* Puedes ajustar este valor según tu diseño */
 }
 
 .service-img {
-    flex-shrink: 0;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 0.5rem 0.5rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
 }
-
+.service-img img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .service-content {
     flex: 1 1 auto;
     display: flex;
@@ -672,41 +703,23 @@ input:valid, textarea:valid {
     height: 100%;
 }
 
-/*** Footer Start ***/
-.footer {
-    background: var(--bs-dark);
-}
-.footer .footer-item a {
-    line-height: 35px;
-    color: var(--bs-body);
-    transition: 0.5s;
-}
-
-.footer .footer-item p {
-    line-height: 35px;
-}
-
-.footer .footer-item a:hover {
-    letter-spacing: 1px;
-    color: var(--bs-white);
-}
-
-.footer .footer-item-post a {
-    transition: 0.5s;
-}
-
-.footer .footer-item-post a:hover {
-    color: var(--bs-primary) !important;
-}
-
-.footer .footer-item-post .footer-btn a {
-    transition: 0.5s;
-}
-
-.footer .footer-item-post .footer-btn a:hover {
-    color: var(--bs-dark);
-}
-/*** Footer End ***/
+.footer-link {
+        color: #fff !important;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      .footer-link:hover {
+        color: #0d6efd !important;
+        text-decoration: underline;
+      }
+      .footer-social {
+        background-color: #6A0F0F !important;
+        border: none;
+        transition: background 0.2s;
+      }
+      .footer-social:hover {
+        background-color: #0d6efd !important;
+      }
 
 /*** copyright Start ***/
 .copyright {
@@ -714,3 +727,60 @@ input:valid, textarea:valid {
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+
+/* Accesibilidad y legibilidad: fuente, color y tamaño base */
+html {
+    font-size: 18px; /* Base accesible, puedes ajustar a 16px si prefieres */
+}
+
+body {
+    font-family: 'Open Sans', Arial, Verdana, Helvetica, sans-serif;
+    color: #222; /* Gris oscuro para alto contraste */
+    background: #fff;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+}
+
+/* Encabezados accesibles */
+h1, .h1 { font-size: 2.5rem; font-weight: 700; color: #111; }
+h2, .h2 { font-size: 2rem; font-weight: 700; color: #222; }
+h3, .h3 { font-size: 1.5rem; font-weight: 600; color: #222; }
+h4, .h4 { font-size: 1.25rem; font-weight: 600; color: #222; }
+h5, .h5 { font-size: 1.125rem; font-weight: 600; color: #222; }
+h6, .h6 { font-size: 1rem; font-weight: 600; color: #222; }
+
+/* Enlaces */
+a {
+    color: #102147; /* Azul oscuro accesible */
+    text-decoration: underline;
+}
+a:hover, a:focus {
+    color: #7e2b34; /* Color institucional o alternativo */
+    text-decoration: underline;
+}
+
+/* Botones */
+.btn, .btn-primary {
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 0.5em;
+    min-width: 120px;
+}
+
+/* Menú y etiquetas pequeñas */
+.nav-link, label, small {
+    font-size: 1rem;
+}
+
+/* Espaciado para mejorar legibilidad */
+p, ul, ol {
+    margin-bottom: 1.2em;
+}
+
+/* Responsive: asegúrate de que el texto nunca sea demasiado pequeño */
+@media (max-width: 600px) {
+    html { font-size: 16px; }
+    h1, .h1 { font-size: 2rem; }
+    h2, .h2 { font-size: 1.5rem; }
+    h3, .h3 { font-size: 1.2rem; }
+}

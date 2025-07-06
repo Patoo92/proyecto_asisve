@@ -231,7 +231,7 @@ sup {
 }
 
 a {
-    color: #7e2b34;
+    color: var(--bs-blue);
     text-decoration: none
 }
 
